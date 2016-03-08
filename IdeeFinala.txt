@@ -1,0 +1,51 @@
+
+08.03.2016
+
+Idee Finala : Aplicatie tip skype .
+
+documentatie ( de la dragulici ) : 
+Program pentru videoconferinte.
+El va putea rula in mai multe instante, pe calculatoare diferite conectate
+ prin internet, oferind cel putin urmatoarele facilitati:
+ - se poate rula in mod server sau client; detine o lista editabila de
+  adrese unde poate realiza conexiuni in vederea conferintei;
+ - cand este rulat ca server, permite initierea unei videoconferinte;
+   atunci utilizatorul poate selecta cateva adrese din lista proprie si
+  comanda anuntarea masinilor respective; pe orice masina unde este instalat
+  programul se va instala automat si un serviciu activ al sistemului de
+  operare care va receptiona anuntul, va cere o confirmare din partea
+  utilizatorului respectiv si in caz afirmativ va lansa o instanta a
+  programului in mod client; serverul va afisa care dintre conexiunile
+  anuntate a fost functionala, care a acceptat participarea la conferinta,
+  etc.;
+ - cand este rulat ca client, se conecteaza la instanta server de la care a
+  fost invitat; ea poate invita la randul ei participarea la aceeasi
+  conferinta a altor masini din lista proprie, iar acestea, daca confirma,
+  se vor conecta la acelasi server.
+De asemenea, indiferent daca este lansat ca server sau client, detecteaza
+ perifericele hardware disponibile (webcam, microfon, etc.) si va deschide
+ mai multe ferestre in care va afisa informatii specifice:
+ - cate o fereastra cu sunet in care este afisata imaginea si sunetul culese
+  de webcam-ul, respectiv microfonul, fiecarui participant la
+  videoconferinta; parametrii acestor ferestre (dimensiune, rezolutie,
+  framerate, calitatea imaginii si sunetului transmis) pot fi setate de la
+  server a.i. sa nu necesite un trafic prea mare de date si sa se blocheze
+  comunicarea;
+ - o fereastra de talk text;
+ - fiecare participant poate incarca un fisier text pe care doreste sa-l
+  explice celorlalti; atunci la fiecare instanta se va deschide cate o
+  fereastra dedicata fisierului, in care se afisaza continutul (scroll-abil
+  al) acestuia; orice participant va putea scroll-a fisierul, iar
+  scroll-area se va face automat sincron la toate instantele; daca vreunul
+  din participanti plimba mouse-ul in aceasta fereastra, toti participantii
+  vor vedea un indicator care se misca sincron in ferestrele lor;
+ - fiecare participant poate incarca spre expunere o prezentare animata gen
+  power point; atunci la fiecare instanta se va deschide o fereastra
+  dedicata prezentarii in care participantii vor putea urmari sincron dar
+  neinteractiv derularea prezentarii;
+ - o fereastra cu numele/adresa celor ce participa la conferinta, indicand
+  pentru fiecare (in functie de perifericele hardware si dotarea software
+  disponibile) ce tip de ferestre vad la momentul curent (imaginea, sunetul,
+  talk, fisierul text, prezentarea animata); fiecare participant va vedea
+  doar ferestrele posibile la el.
+  
