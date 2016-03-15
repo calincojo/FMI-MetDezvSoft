@@ -1,0 +1,20 @@
+15.03.2016
+
+Scop : Stabilirea cerintelor aplicatiei 
+
+Cerinte aplicatie 
+- comunicare audio video text cu persoanele din lista de contacte
+- Posibilitatea de a purta o conversatie ( 2 oameni ) sau o conferinta (3 sau mai multi)
+
+Optional
+transfer de fisiere
+fereastra de talk-text
+feedback vreme
+
+Decizii finale :
+				1)Abordare : high level
+				2/Limbaj: Python
+
+Pentru data viitoare : Creeare diagrama UML pentru cerinte
+
+Urmatoarea intalnire : vineri 25.03.2016
