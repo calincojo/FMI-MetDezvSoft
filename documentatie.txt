@@ -1,0 +1,39 @@
+Am aborbat toate cerintele. Pe cele marcate cu # le consider oarecum gata, pentru cele cu * as avea nevoie de codul sursa.
+
+# descriere în limbaj natural a proiectului (1-2 paragrafe) - 1 pct
+	Kyte este o aplicatie care faciliteaza comunicarea text si audio-video intre doi sau mai multi utilizatori. Programul poate rula in mai multe instante, pe calculatoare diferite care sunt conectate la internet.
+	Fiecare utilizator detine o lista de adrese de contact pe care o poate consulta si modifica la pornirea programului, urmand sa aleaga un contact sau mai multi in vederea trimiterii unor invitatii si eventual a stabilirii unei convorbiri, respectiv, stabilirea unei conferinte.
+
+# listă de 5 cerințe în limbaj natural (structurat) - 1 pct
+A facut Renata.
+Eu:
+	- mentirea unei adrese de contacte pentru fiecare utilizator
+	- permiterea comunicarii text/audio/video
+	- posibilitatea de transfer de fisiere
+	- fiabilitatea sesiunii de comunicare
+
+2 specificații formale în JML sau 2 scheme în Z  - 1 pct
+	???
+
+# 1-2 diagrame UML cazuri de utilizare - 1 pct
+A facut Renata.
+
+* 1-2 diagrame UML de clase - 1 pct
+Clase: Contact, Lista de Contacte
+
+* 1-2 diagrame UML de secvențe - 1 pct
+
+# 1-2 diagrame UML de stări - 1 pct
+
+4 teste (unitare sau de alt tip, dar nu manuale) care rulează - 2 pct 
+	- cum? 
+		Cel mai simplu ar fi crearea unei functii pentru fiecare test unitar si utilizarea instructiunii 'assert'
+		pentru verificarea conditiilor
+	- ce ar putea testa?
+		(Fiind o aplicatie de retea, ar trebui testata mai ales functionarea comunicarii in retea.)
+		1. testeaza conexiunea (clientul trimite un mesaj catre server si asteapta raspuns intr-un interval de timp prestabilit)
+		2. testeaza deschiderea si mentinerea sesiunii de comunicare
+		3. testeaza calitatea transmisiei audio-video (clientul trimite care server o mostra pe care acesta sa o evalueze programatic si 
+														sa trimita inapoi o nota; daca este sub 5, testul pica)
+			* Asta ar fi 2 teste, unul pentru audio, altul pentru video.
+		4. testeaza adaugarea/stergerea in lista de contacte (trivial, dar sa fie)
