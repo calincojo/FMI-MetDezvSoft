@@ -1,5 +1,8 @@
 import socket
 import threading
+from Queue import Queue
+
+rcvTextQueue = Queue(10)
 
 def startTextServer(socketServer) :
     CHUNK = 1024
@@ -24,6 +27,7 @@ def sendData(s, CHUNK):
 
 def receiveData(s, CHUNK):
     data = s.recv(1024)
-    while data !='':
+    while 1:
         print data
         data = s.recv(1024)
+        rcvTextQueue.put(data)

@@ -14,10 +14,12 @@ import time
 import socket
 from Queue import Queue
 import tkSimpleDialog
+from serverText import rcvTextQueue
 
 
 root = ''
 queue = ''
+msgQueue = Queue()
 MYNAME = "Calin"
 threadAudioServer = ''
 threadVideoServer = ''
@@ -25,6 +27,7 @@ threadTextServer = ''
 
 socketClientText = ''
 socketServerText = ''
+nameToIP = ''
 '''
 
 th = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
@@ -81,13 +84,17 @@ def Call():
     #todo start the audio and video client in order to connect with the server
     return
 
-def sendTextMessage(message, destTxt, s):
-
+def sendTextMessage(message, destTxt):
+    content = message.get("1.0",END)
+    print 'Put ' + content + ' to msgQueue.'
+    msgQueue.put(content)
+    '''
     content = message.get("1.0",END)
     destTxt.config(state=NORMAL)
     destTxt.insert(END, MYNAME + " :"+ content)
     destTxt.config(state=DISABLED)
     s.sendall(content)
+    '''
 
 def getTextMessage(destTxt, s):
     while True:
@@ -126,8 +133,8 @@ def chatWindow(IPtoConnect):
 
     textMessageWindow = textWindow.textWindow(leftFrame,200,100)
 
-    #sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
-    #sendMsgBtn.pack(fill=BOTH)
+    sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
+    sendMsgBtn.pack(fill=BOTH)
 
     #th= threading.Thread(group=None, target=sendData, args=(), kwargs={})
     #th.start()
@@ -147,6 +154,33 @@ def checkIncomingConnection():
     else:
         print "DA"
         chatWindow(1)
+
+def checkMsgToSend():
+    print 'def checkMsgToSend:'
+
+    s = socket.socket()
+
+    # TODO
+    s.connect(("localhost", 50052))
+    print 'Connected'
+    while 1:
+        print 'Looking for messages to send...'
+        while not msgQueue.empty():
+            msg = msgQueue.get()
+            print 'Sending ' + msg + ' to all.'
+            s.send(msg)
+
+        time.sleep(0.5)
+
+def checkMsgToRcv():
+    print 'checkMsgToRcv:'
+    while 1:
+        print 'Looking for messages to receive...'
+        while not rcvTextQueue.empty():
+            msg = rcvTextQueue.get()
+            print 'Receiving ' + msg + '.'
+
+        time.sleep(0.5)
 
 def addNewUser():
     new_user = tkSimpleDialog.askstring("User", "Enter user to add");
@@ -175,14 +209,26 @@ def Main():
     b.pack(fill=BOTH)
     b = Button(root, text="Renata", command= lambda: startChatSession(nameToIP["renata"]) )
     b.pack(fill=BOTH)
+    b = Button(root, text="Tudor", command= lambda: startChatSession(nameToIP["tudor"]) )
+    b.pack(fill=BOTH)
     b = Button(root, text="Marele plus", command = addNewUser)
     b.pack()
 
     root.after(2000,checkIncomingConnection)
+
+    msgToSendThread = threading.Thread(target = checkMsgToSend)
+    msgToSendThread.start()
+
+    msgToRcvThread = threading.Thread(target = checkMsgToRcv)
+    msgToRcvThread.start()
+
+    print 'Started checkMsgToSend.'
+
     root.mainloop()
 
 if __name__ == "__main__":
     root = Tk()
     queue =Queue()
+    msgQueue = Queue()
     Main()
 
