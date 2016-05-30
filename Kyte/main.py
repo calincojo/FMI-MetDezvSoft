@@ -8,33 +8,48 @@ import serverVideo
 import  serverAudio
 import threading
 import time
+
+
+MYNAME = "Calin"
+threadAudioServer = ''
+threadVideoServer = ''
 '''
+
 th = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
 th.start()
 th = threading.Thread(group=None, target=clientAudio.audioServer, args=(), kwargs={})
 th.start()
 time.sleep(5)
-th = threading.Thread(group=None, target=clientAudio.audioClient(), args=(), kwargs={})
+th = threading.Thread(group=None, target=clientAudio.audioClient, args=(), kwargs={})
 th.start()
 clientVideo.videoClient()
+
 '''
 
 
-def callback():
-    print "click!"
+#start the servers for all type of communication at program startup
+def startServers():
+    threadVideoServer = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
+    threadVideoServer.start()
+    threadAudioServer = threading.Thread(group=None, target=clientAudio.audioServer, args=(), kwargs={})
+    threadAudioServer.start()
 
 def Call():
+    #todo start the audio and video client in order to connect with the server
     return
 
 def sendTextMessage(message, destTxt):
+
+    #just on the client side
     content = message.get("1.0",END)
-    print content
     destTxt.config(state=NORMAL)
-    destTxt.insert(END,content)
+    destTxt.insert(END, MYNAME + " :"+ content)
     destTxt.config(state=DISABLED)
 
+    #todo send the message to the server
 
-def newWindow():
+
+def chatWindow(IPtoConnect):
     window = Tk()
     leftFrame = Frame(window,bg="black",  cursor="dot")
     rightFrame = Frame(window,width=1000)
@@ -71,17 +86,27 @@ def newWindow():
     window.mainloop()
 
 
-root = Tk()
+def startChatSession( IPtoConnect):
+    chatWindow(IPtoConnect)
+    return
 
-root.resizable(False,False)
+def Main():
 
-l = Label(root, text="---Online users---",bg="blue")
-l.pack(fill=X)
+    startServers()
+    root = Tk()
+    root.resizable(False,False)
 
-b = Button(root, text="Calin", command=newWindow, width = 45)
-b.pack(fill=BOTH)
-b = Button(root, text="Renata", command=callback)
-b.pack(fill=BOTH)
+    nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" }
+
+    l = Label(root, text="---Online users---",bg="blue")
+    l.pack(fill=X)
+
+    b = Button(root, text="Calin", command= lambda: startChatSession(nameToIP["calin"]), width = 45)
+    b.pack(fill=BOTH)
+    b = Button(root, text="Renata", command= lambda: startChatSession(nameToIP["renata"]) )
+    b.pack(fill=BOTH)
 
 
-root = mainloop()
+    root = mainloop()
+
+Main()
