@@ -23,67 +23,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="clientAudio.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clientAudio.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoServer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/videoServer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="45" selection-start="1065" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="serverAudio.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serverAudio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="18" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="2091">
+            <state line="93" column="24" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2091">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.py">
+      <file leaf-file-name="clientVideo.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clientVideo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="22" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1326">
+            <state line="47" column="33" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client.py">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="1.3761904" vertical-offset="102" max-vertical-offset="1292">
+            <state line="109" column="0" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="2329">
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#25#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zeroCopy.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zeroCopy.py">
+      <file leaf-file-name="serverVideo.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serverVideo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="27" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="272">
+            <state line="28" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="senderImage.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/senderImage.py">
+      <file leaf-file-name="main_cpy.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_cpy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="19" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="459">
+            <state line="44" column="10" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2108">
+              <folding>
+                <element signature="e#49#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serverText.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serverText.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="578">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clientText.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clientText.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="30" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listenForConnection.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/listenForConnection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="25" selection-start="373" selection-end="373" vertical-scroll-proportion="0.32484075" vertical-offset="0" max-vertical-offset="628">
+              <folding>
+                <element signature="e#25#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,6 +121,11 @@
         <option value="$PROJECT_DIR$/serverAudio.py" />
         <option value="$PROJECT_DIR$/clientAudio.py" />
         <option value="$PROJECT_DIR$/client.py" />
+        <option value="$PROJECT_DIR$/main_cpy.py" />
+        <option value="$PROJECT_DIR$/listenForConnection.py" />
+        <option value="$PROJECT_DIR$/serverText.py" />
+        <option value="$PROJECT_DIR$/clientText.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -143,27 +161,27 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AudioChat" />
+              <option name="myItemId" value="Kyte" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AudioChat" />
+              <option name="myItemId" value="Kyte" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AudioChat" />
+              <option name="myItemId" value="Kyte" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,31 +191,14 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.client">
-    <configuration default="false" name="n" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AudioChat" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/n.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -216,42 +217,6 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="client1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AudioChat" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client1.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="videoServer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AudioChat" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/videoServer.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,6 +230,62 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AudioChat" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Kyte" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="clientText" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Kyte" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clientText.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main_cpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Kyte" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_cpy.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -413,19 +434,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.clientAudio" />
-      <item index="1" class="java.lang.String" itemvalue="Python.n" />
-      <item index="2" class="java.lang.String" itemvalue="Python.server" />
-      <item index="3" class="java.lang.String" itemvalue="Python.client1" />
-      <item index="4" class="java.lang.String" itemvalue="Python.videoServer" />
-      <item index="5" class="java.lang.String" itemvalue="Python.client" />
+      <item index="1" class="java.lang.String" itemvalue="Python.server" />
+      <item index="2" class="java.lang.String" itemvalue="Python.client" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main" />
+      <item index="4" class="java.lang.String" itemvalue="Python.clientText" />
+      <item index="5" class="java.lang.String" itemvalue="Python.main_cpy" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.client" />
-        <item index="1" class="java.lang.String" itemvalue="Python.server" />
-        <item index="2" class="java.lang.String" itemvalue="Python.client1" />
-        <item index="3" class="java.lang.String" itemvalue="Python.videoServer" />
-        <item index="4" class="java.lang.String" itemvalue="Python.n" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main_cpy" />
+        <item index="2" class="java.lang.String" itemvalue="Python.clientText" />
+        <item index="3" class="java.lang.String" itemvalue="Python.client" />
+        <item index="4" class="java.lang.String" itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>
@@ -457,13 +478,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908257" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -504,9 +525,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/videoServer.py">
+    <entry file="file://$PROJECT_DIR$/serverAudio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1065" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="884">
+        <state line="93" column="24" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientVideo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="33" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="18" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1989">
+          <folding>
+            <element signature="e#25#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_cpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="107" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2108">
+          <folding>
+            <element signature="e#49#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverText.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="428" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientText.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="750" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listenForConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientAudio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
           <folding />
         </state>
       </provider>
@@ -518,32 +594,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
+    <entry file="file://$PROJECT_DIR$/clientAudio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="22" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1326">
+        <state line="11" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
+    <entry file="file://$PROJECT_DIR$/serverAudio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1292">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeroCopy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="27" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/senderImage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="459">
+        <state line="117" column="18" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="1989" max-vertical-offset="2091">
           <folding />
         </state>
       </provider>
@@ -567,11 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="595" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clientAudio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="18" selection-start="2386" selection-end="2386" vertical-scroll-proportion="0.0" vertical-offset="1497" max-vertical-offset="2125">
@@ -591,16 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="595" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/pyaudio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="607" column="0" selection-start="21397" selection-end="21397" vertical-scroll-proportion="0.0" vertical-offset="10176" max-vertical-offset="19108" />
@@ -611,33 +656,9 @@
         <state line="16" column="0" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544" />
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/socket.py">
+    <entry file="file://$PROJECT_DIR$/serverAudio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="0" selection-start="7538" selection-end="7581" vertical-scroll-proportion="0.33333334" vertical-offset="3563" max-vertical-offset="9690" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/senderImage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeroCopy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="27" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="969" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/videoServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1065" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+        <state line="93" column="24" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="1376" max-vertical-offset="2006">
           <folding />
         </state>
       </provider>
@@ -649,25 +670,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverAudio.py">
+    <entry file="file://$PROJECT_DIR$/clientVideo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="18" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="2006">
+        <state line="47" column="33" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
+    <entry file="file://$PROJECT_DIR$/clientText.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="22" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1326">
+        <state line="18" column="30" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
+    <entry file="file://$PROJECT_DIR$/serverVideo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1372" selection-end="1372" vertical-scroll-proportion="1.3761904" vertical-offset="102" max-vertical-offset="1292">
+        <state line="28" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="482" column="0" selection-start="14914" selection-end="14914" vertical-scroll-proportion="0.0" vertical-offset="8067" max-vertical-offset="16473">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="0" selection-start="7538" selection-end="7538" vertical-scroll-proportion="0.0" vertical-offset="3579" max-vertical-offset="9690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverText.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_cpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="10" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2108">
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#49#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="2329">
+          <folding>
+            <element signature="e#25#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listenForConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="25" selection-start="373" selection-end="373" vertical-scroll-proportion="0.32484075" vertical-offset="0" max-vertical-offset="628">
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
