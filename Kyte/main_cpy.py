@@ -3,7 +3,8 @@ import threading
 from Queue import Queue
 from time import sleep
 
-main = ''
+
+queue = Queue()
 
 def modify_var():
     sleep(5)
@@ -11,19 +12,22 @@ def modify_var():
 
 def update_txt(event = None):
     print "hei"
-    if  queue.not_empty :
-        a = queue.get()
+    if queue.empty():
+        main.after(2000,update_txt)
+    else:
+        a= queue.get()
         print a
-    main.after(5000,update_txt)
 
 
+
+
+th = threading.Thread(group=None, target=modify_var, args=(), kwargs={})
+th.start()
 
 main = Tkinter.Tk()
 txt = Tkinter.Text(main)
 txt.grid()
 
-main.after(5000,update_txt)
-th = threading.Thread(group=None, target=modify_var, args=(), kwargs={})
-th.start()
-queue = Queue()
+main.after(2000,update_txt)
+
 main.mainloop()

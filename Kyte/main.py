@@ -11,8 +11,12 @@ import clientText
 import threading
 import listenForConnection
 import time
+import socket
+from Queue import Queue
 
 
+root = ''
+queue = ''
 MYNAME = "Calin"
 threadAudioServer = ''
 threadVideoServer = ''
@@ -34,6 +38,28 @@ clientVideo.videoClient()
 '''
 
 
+def listenForConnection() :
+  #  main.chatWindow(1)
+    HOST = ''                 # Symbolic name meaning all available interfaces
+    PORT = 50030              # Arbitrary non-privileged port
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((HOST, PORT))
+    s.listen(1)
+    conn, addr = s.accept()
+    queue.put(1)
+    #   main.chatWindow(addr)
+
+    conn.close()
+    s.close()
+
+def tryConnect(IP) :
+    HOST = IP    # The remote host
+    PORT = 50030              # The same port as used by the server
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((HOST, PORT))
+    s.sendall('Hello, world')
+    s.close()
+
 #start the servers for all type of communication at program startup
 def startServers():
     '''
@@ -46,7 +72,7 @@ def startServers():
     threadTextServer = threading.Thread(group=None, target=serverText.startTextServer, args=(socketServerText,), kwargs={})
     threadTextServer.start()
 
-    th = threading.Thread(group=None, target = listenForConnection.listenForConnection, args=(), kwargs={})
+    th = threading.Thread(group=None, target=listenForConnection, args=(), kwargs={})
     th.start()
 
 
@@ -109,19 +135,21 @@ def chatWindow(IPtoConnect):
 
 def startChatSession( IPtoConnect):
     print IPtoConnect
-    listenForConnection.tryConnect(IPtoConnect)
+    tryConnect(IPtoConnect)
     chatWindow(IPtoConnect)
     return
 
 
-def block():
-    while True:
-        i =1
+def checkIncomingConnection():
+    if queue.empty():
+        root.after(2000, checkIncomingConnection)
+    else:
+        print "DA"
+        chatWindow(1)
 
 def Main():
 
     startServers()
-    root = Tk()
     root.resizable(False,False)
 
     nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" }
@@ -134,11 +162,11 @@ def Main():
     b = Button(root, text="Renata", command= lambda: startChatSession(nameToIP["renata"]) )
     b.pack(fill=BOTH)
 
-    b = Button(root, text="Blocheaza", command= lambda: block(), width = 45)
-    b.pack(fill=BOTH)
-
-
-    root = mainloop()
+    root.after(2000,checkIncomingConnection)
+    root.mainloop()
 
 if __name__ == "__main__":
+    root = Tk()
+    queue =Queue()
     Main()
+
