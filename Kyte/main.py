@@ -161,26 +161,27 @@ def checkMsgToSend():
     s = socket.socket()
 
     # TODO
+    print '[checkMsgToSend] Waiting for the connection from calin...'
     s.connect((nameToIP['calin'], 50052))
-    print 'Connected'
+    print '[checkMsgToSend] Connected.'
     while 1:
-        print 'Looking for messages to send...'
+        print '[checkMsgToSend] Looking for messages to send...'
         while not msgQueue.empty():
             msg = msgQueue.get()
-            print 'Sending ' + msg + ' to all.'
+            print '[checkMsgToSend] Sending ' + msg + ' to all.'
             s.send(msg)
-
-        time.sleep(0.5)
+            print '[checkMsgToSend] Sent.'
+        time.sleep(10)
 
 def checkMsgToRcv():
-    print 'checkMsgToRcv:'
+    print '[checkMsgToSend] checkMsgToRcv:'
     while 1:
-        print 'Looking for messages to receive...'
+        print '[checkMsgToSend] Looking for messages to receive...'
         while not rcvTextQueue.empty():
             msg = rcvTextQueue.get()
-            print 'Receiving ' + msg + '.'
+            print '[checkMsgToSend] Receiving ' + msg + '.'
 
-        time.sleep(0.5)
+        time.sleep(10)
 
 def addNewUser():
     new_user = tkSimpleDialog.askstring("User", "Enter user to add");

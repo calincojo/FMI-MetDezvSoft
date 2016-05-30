@@ -26,8 +26,9 @@ def sendData(s, CHUNK):
         s.sendall(data)
 
 def receiveData(s, CHUNK):
+    print '[receiveData]'
     data = s.recv(1024)
     while 1:
-        print data
+        print '[receiveData] Received ' + data
         data = s.recv(1024)
         rcvTextQueue.put(data)
