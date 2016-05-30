@@ -43,9 +43,10 @@ try:
 
 		print 'Request from ', addr
 
-		ip = addr[0]
 		msg = c.recv(1024)
-		op = msg.split(' ')[0]
+		#ip = msg.split(' ')[2].strip()
+		ip = addr[0]
+		op = msg.split(' ')[0].strip()
 		name = msg.split(' ')[1].strip()
 
 		if op == 'add':

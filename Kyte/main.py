@@ -13,6 +13,7 @@ import listenForConnection
 import time
 import socket
 from Queue import Queue
+import tkSimpleDialog
 
 
 root = ''
@@ -147,12 +148,25 @@ def checkIncomingConnection():
         print "DA"
         chatWindow(1)
 
+def addNewUser():
+    new_user = tkSimpleDialog.askstring("User", "Enter user to add");
+    # ask the naming service if the user is taken
+    s = socket.socket();
+    s.connect((socket.gethostname(), 1234))
+    s.send('lookup ' + new_user);
+    msg = s.recv(1024);
+    print msg
+    if (msg != 'null'):
+        print 'The user ' + new_user + ' is ok!'
+        # add the user to the interface
+    s.close();
+
 def Main():
 
     startServers()
     root.resizable(False,False)
 
-    nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" }
+    nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196'}
 
     l = Label(root, text="---Online users---",bg="blue")
     l.pack(fill=X)
@@ -161,6 +175,8 @@ def Main():
     b.pack(fill=BOTH)
     b = Button(root, text="Renata", command= lambda: startChatSession(nameToIP["renata"]) )
     b.pack(fill=BOTH)
+    b = Button(root, text="Marele plus", command = addNewUser)
+    b.pack()
 
     root.after(2000,checkIncomingConnection)
     root.mainloop()
