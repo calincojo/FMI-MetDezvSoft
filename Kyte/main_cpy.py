@@ -1,4 +1,5 @@
 __author__ = 'Cojocaru'
+__author__ = 'Cojocaru'
 
 from Tkinter import *
 import textWindow
@@ -9,7 +10,6 @@ import  serverAudio
 import serverText
 import clientText
 import threading
-import listenForConnection
 import time
 
 
@@ -17,9 +17,6 @@ MYNAME = "Calin"
 threadAudioServer = ''
 threadVideoServer = ''
 threadTextServer = ''
-
-socketClientText = ''
-socketServerText = ''
 '''
 
 th = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
@@ -38,32 +35,25 @@ clientVideo.videoClient()
 def startServers():
     threadVideoServer = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
     threadVideoServer.start()
-    threadAudioServer = threading.Thread(group=None, target=clientAudio.audioServer, args=(), kwargs={})
+    threadAudioServer = threading.Thread(group=None, target=serverAudio.audioServer(), args=(), kwargs={})
     threadAudioServer.start()
-    threadTextServer = threading.Thread(group=None, target=serverText.startTextServer, args=(socketServerText,), kwargs={})
+    threadTextServer = threading.Thread(group=None, target=serverText.startTextServer(), args=(), kwargs={})
     threadTextServer.start()
-
-    th = threading.Thread(group=None, target = listenForConnection.listenForConnection, args=(), kwargs={})
-
 
 def Call():
     #todo start the audio and video client in order to connect with the server
     return
 
-def sendTextMessage(message, destTxt, s):
+def sendTextMessage(message, destTxt):
 
+    #just on the client side
     content = message.get("1.0",END)
     destTxt.config(state=NORMAL)
     destTxt.insert(END, MYNAME + " :"+ content)
     destTxt.config(state=DISABLED)
-    s.sendall(content)
 
-def getTextMessage(destTxt, s):
-    while True:
-        data = s.recv(1024)
-        destTxt.config(state=NORMAL)
-        destTxt.insert(END, "Name" + " :"+ data)
-        destTxt.config(state=DISABLED)
+    #todo send the message to the server
+
 
 def chatWindow(IPtoConnect):
 
@@ -94,17 +84,15 @@ def chatWindow(IPtoConnect):
 
     textMessageWindow = textWindow.textWindow(leftFrame,200,100)
 
-    sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
+    sendMsgBtn = Button(leftFrame, text="Send message", command = lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
     sendMsgBtn.pack(fill=BOTH)
-
-    #th= threading.Thread(group=None, target=sendData, args=(), kwargs={})
-    #th.start()
 
     window.mainloop()
 
 
 def startChatSession( IPtoConnect):
-    listenForConnection.tryConnect(IPtoConnect)
+    threadTextClient = threading.Thread(group=None, target=clientText.startTextClient(), args=(IPtoConnect,), kwargs={})
+    threadTextServer.start()
     chatWindow(IPtoConnect)
     return
 
