@@ -27,5 +27,3 @@ def receiveData(s, CHUNK):
     while data !='':
         print data
         data = s.recv(1024)
-
-startTextServer()
