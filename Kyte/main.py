@@ -23,16 +23,29 @@ clientVideo.videoClient()
 def callback():
     print "click!"
 
+def Call():
+    return
+
+def sendTextMessage(message, destTxt):
+    content = message.get("1.0",END)
+    print content
+    destTxt.config(state=NORMAL)
+    destTxt.insert(END,content)
+    destTxt.config(state=DISABLED)
+
+
 def newWindow():
     window = Tk()
-    content = "fdasfasfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
     leftFrame = Frame(window,bg="black",  cursor="dot")
     rightFrame = Frame(window,width=1000)
 
     serverVideoFrame = Frame(rightFrame, bg="red")
     clientVideoFrame = Frame(rightFrame)
 
+    callButton = Button(rightFrame, text="Call", command = lambda : Call())
+
     serverVideoFrame.pack(side=TOP)
+    callButton.pack(side = BOTTOM, fill = X)
     clientVideoFrame.pack(side=BOTTOM)
 
     l = Label(serverVideoFrame, text="server Video",width=50)
@@ -42,16 +55,18 @@ def newWindow():
     l.pack(side = BOTTOM)
 
     leftFrame.pack(side=LEFT)
-    rightFrame.pack(side=LEFT)
+    rightFrame.pack(side=LEFT, fill = BOTH)
 
     messagesWindow = textWindow.textWindow(leftFrame,400,400)
+    messagesWindow.txt.config(state=DISABLED)
 
-    messagesWindow.txt.insert(END,content)
 
     textMessageWindow = textWindow.textWindow(leftFrame,200,100)
 
-    sendMsgBtn = Button(leftFrame, text="Send message")
+    sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
     sendMsgBtn.pack(fill=BOTH)
+
+
 
     window.mainloop()
 
