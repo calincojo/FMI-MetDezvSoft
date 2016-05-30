@@ -50,6 +50,7 @@ def sendTextMessage(message, destTxt):
 
 
 def chatWindow(IPtoConnect):
+
     window = Tk()
     leftFrame = Frame(window,bg="black",  cursor="dot")
     rightFrame = Frame(window,width=1000)
@@ -75,13 +76,10 @@ def chatWindow(IPtoConnect):
     messagesWindow = textWindow.textWindow(leftFrame,400,400)
     messagesWindow.txt.config(state=DISABLED)
 
-
     textMessageWindow = textWindow.textWindow(leftFrame,200,100)
 
     sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
     sendMsgBtn.pack(fill=BOTH)
-
-
 
     window.mainloop()
 
