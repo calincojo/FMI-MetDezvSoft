@@ -38,16 +38,20 @@ def Call():
     #todo start the audio and video client in order to connect with the server
     return
 
-def sendTextMessage(message, destTxt):
+def sendTextMessage(message, destTxt, s):
 
-    #just on the client side
     content = message.get("1.0",END)
     destTxt.config(state=NORMAL)
     destTxt.insert(END, MYNAME + " :"+ content)
     destTxt.config(state=DISABLED)
+    s.sendall(content)
 
-    #todo send the message to the server
-
+def getTextMessage(destTxt, s):
+    while True:
+        data = s.recv(1024)
+        destTxt.config(state=NORMAL)
+        destTxt.insert(END, "Name" + " :"+ data)
+        destTxt.config(state=DISABLED)
 
 def chatWindow(IPtoConnect):
 
@@ -80,6 +84,9 @@ def chatWindow(IPtoConnect):
 
     sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
     sendMsgBtn.pack(fill=BOTH)
+
+    th= threading.Thread(group=None, target=sendData, args=(), kwargs={})
+    th.start()
 
     window.mainloop()
 
