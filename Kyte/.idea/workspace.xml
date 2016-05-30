@@ -44,7 +44,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="2329">
+            <state line="60" column="18" selection-start="1601" selection-end="1607" vertical-scroll-proportion="-2.34" vertical-offset="903" max-vertical-offset="2550">
               <folding>
                 <element signature="e#25#46#0" expanded="true" />
               </folding>
@@ -61,12 +61,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_cpy.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_cpy.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_cpy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="10" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2108">
+            <state line="13" column="23" selection-start="0" selection-end="487" vertical-scroll-proportion="0.35191083" vertical-offset="0" max-vertical-offset="628">
               <folding>
-                <element signature="e#49#70#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,7 +75,7 @@
       <file leaf-file-name="serverText.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serverText.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="578">
+            <state line="10" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -84,16 +84,16 @@
       <file leaf-file-name="clientText.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clientText.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="30" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="680">
+            <state line="35" column="0" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listenForConnection.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="listenForConnection.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/listenForConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="373" selection-end="373" vertical-scroll-proportion="0.32484075" vertical-offset="0" max-vertical-offset="628">
+            <state line="13" column="5" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
               </folding>
@@ -121,11 +121,11 @@
         <option value="$PROJECT_DIR$/serverAudio.py" />
         <option value="$PROJECT_DIR$/clientAudio.py" />
         <option value="$PROJECT_DIR$/client.py" />
-        <option value="$PROJECT_DIR$/main_cpy.py" />
-        <option value="$PROJECT_DIR$/listenForConnection.py" />
         <option value="$PROJECT_DIR$/serverText.py" />
         <option value="$PROJECT_DIR$/clientText.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/listenForConnection.py" />
+        <option value="$PROJECT_DIR$/main_cpy.py" />
       </list>
     </option>
   </component>
@@ -198,63 +198,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AudioChat" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AudioChat" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Kyte" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.main_cpy">
     <configuration default="false" name="clientText" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -286,6 +230,44 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Kyte" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_cpy.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AudioChat" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AudioChat" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -432,21 +414,40 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Kyte" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.clientAudio" />
-      <item index="1" class="java.lang.String" itemvalue="Python.server" />
-      <item index="2" class="java.lang.String" itemvalue="Python.client" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.clientText" />
-      <item index="5" class="java.lang.String" itemvalue="Python.main_cpy" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.clientText" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main_cpy" />
+      <item index="4" class="java.lang.String" itemvalue="Python.server" />
+      <item index="5" class="java.lang.String" itemvalue="Python.client" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main_cpy" />
-        <item index="2" class="java.lang.String" itemvalue="Python.clientText" />
-        <item index="3" class="java.lang.String" itemvalue="Python.client" />
-        <item index="4" class="java.lang.String" itemvalue="Python.server" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.main_cpy" />
+        <item index="1" class="java.lang.String" itemvalue="Python.clientText" />
+        <item index="2" class="java.lang.String" itemvalue="Python.client" />
+        <item index="3" class="java.lang.String" itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>
@@ -551,9 +552,7 @@
     <entry file="file://$PROJECT_DIR$/main_cpy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="107" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2108">
-          <folding>
-            <element signature="e#49#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -677,20 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientText.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serverVideo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="482" column="0" selection-start="14914" selection-end="14914" vertical-scroll-proportion="0.0" vertical-offset="8067" max-vertical-offset="16473">
@@ -707,34 +692,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serverText.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="578">
+        <state line="10" column="0" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_cpy.py">
+    <entry file="file://$PROJECT_DIR$/clientText.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="10" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="2108">
+        <state line="35" column="0" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/lib-tk/Tkinter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1973" column="0" selection-start="81147" selection-end="81147" vertical-scroll-proportion="0.3325062" vertical-offset="33407" max-vertical-offset="63563">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverVideo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listenForConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding>
-            <element signature="e#49#70#0" expanded="true" />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="2329">
+        <state line="60" column="18" selection-start="1601" selection-end="1607" vertical-scroll-proportion="-2.34" vertical-offset="903" max-vertical-offset="2550">
           <folding>
             <element signature="e#25#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listenForConnection.py">
+    <entry file="file://$PROJECT_DIR$/main_cpy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="373" selection-end="373" vertical-scroll-proportion="0.32484075" vertical-offset="0" max-vertical-offset="628">
+        <state line="13" column="23" selection-start="0" selection-end="487" vertical-scroll-proportion="0.35191083" vertical-offset="0" max-vertical-offset="628">
           <folding>
-            <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>

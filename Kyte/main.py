@@ -36,14 +36,18 @@ clientVideo.videoClient()
 
 #start the servers for all type of communication at program startup
 def startServers():
+    '''
     threadVideoServer = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
     threadVideoServer.start()
     threadAudioServer = threading.Thread(group=None, target=clientAudio.audioServer, args=(), kwargs={})
     threadAudioServer.start()
+    '''
+
     threadTextServer = threading.Thread(group=None, target=serverText.startTextServer, args=(socketServerText,), kwargs={})
     threadTextServer.start()
 
     th = threading.Thread(group=None, target = listenForConnection.listenForConnection, args=(), kwargs={})
+    th.start()
 
 
 def Call():
@@ -68,6 +72,7 @@ def getTextMessage(destTxt, s):
 def chatWindow(IPtoConnect):
 
     window = Tk()
+
     leftFrame = Frame(window,bg="black",  cursor="dot")
     rightFrame = Frame(window,width=1000)
 
@@ -94,19 +99,24 @@ def chatWindow(IPtoConnect):
 
     textMessageWindow = textWindow.textWindow(leftFrame,200,100)
 
-    sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
-    sendMsgBtn.pack(fill=BOTH)
+    #sendMsgBtn = Button(leftFrame, text="Send message", command= lambda : sendTextMessage(textMessageWindow.txt, messagesWindow.txt))
+    #sendMsgBtn.pack(fill=BOTH)
 
     #th= threading.Thread(group=None, target=sendData, args=(), kwargs={})
     #th.start()
 
     window.mainloop()
 
-
 def startChatSession( IPtoConnect):
+    print IPtoConnect
     listenForConnection.tryConnect(IPtoConnect)
     chatWindow(IPtoConnect)
     return
+
+
+def block():
+    while True:
+        i =1
 
 def Main():
 
@@ -122,6 +132,9 @@ def Main():
     b = Button(root, text="Calin", command= lambda: startChatSession(nameToIP["calin"]), width = 45)
     b.pack(fill=BOTH)
     b = Button(root, text="Renata", command= lambda: startChatSession(nameToIP["renata"]) )
+    b.pack(fill=BOTH)
+
+    b = Button(root, text="Blocheaza", command= lambda: block(), width = 45)
     b.pack(fill=BOTH)
 
 
