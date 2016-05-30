@@ -27,7 +27,7 @@ threadTextServer = ''
 
 socketClientText = ''
 socketServerText = ''
-nameToIP = ''
+nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196'}
 '''
 
 th = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
@@ -161,7 +161,7 @@ def checkMsgToSend():
     s = socket.socket()
 
     # TODO
-    s.connect(("localhost", 50052))
+    s.connect((nameToIP['calin'], 50052))
     print 'Connected'
     while 1:
         print 'Looking for messages to send...'
@@ -199,8 +199,6 @@ def Main():
 
     startServers()
     root.resizable(False,False)
-
-    nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196'}
 
     l = Label(root, text="---Online users---",bg="blue")
     l.pack(fill=X)
