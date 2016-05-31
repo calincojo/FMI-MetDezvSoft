@@ -28,7 +28,7 @@ threadTextServer = ''
 
 socketClientText = ''
 socketServerText = ''
-nameToIP = {"renata" : "10.11.129.74", "calin" : "10.11.129.90" , 'tudor': '10.11.117.117', "calin2" : "10.11.12992"}
+nameToIP = {"renata" : "10.11.129.74", "calin" : "10.11.129.90" , 'tudor': '10.11.117.117', "calin2" : "10.11.129.92"}
 
 def listenForConnection() :
   #  main.chatWindow(1)
