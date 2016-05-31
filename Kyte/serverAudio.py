@@ -85,7 +85,7 @@ def audioServer():
 
 
     HOST = ''                 # Symbolic name meaning all available interfaces
-    PORT =  50009                # Arbitrary non-privileged port
+    PORT =  50007                # Arbitrary non-privileged port
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     f = s.makefile()
     s.bind((HOST, PORT))

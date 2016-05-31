@@ -9,7 +9,7 @@ from multiprocessing import Process
 import thread
 
 
-def audioClient() :
+def audioClient(IP) :
 
     print 'Client Started'
 
@@ -19,7 +19,7 @@ def audioClient() :
     RATE = 44100
     RECORD_SECONDS = 5
 
-    HOST = '192.168.2.230'    # 192.168.2.230 The remote host
+    HOST = IP    # 192.168.2.230 The remote host
     PORT = 50007              # The same port as used by the server
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

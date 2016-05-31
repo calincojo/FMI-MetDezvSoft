@@ -28,19 +28,6 @@ threadTextServer = ''
 socketClientText = ''
 socketServerText = ''
 nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196'}
-'''
-
-th = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
-th.start()
-th = threading.Thread(group=None, target=clientAudio.audioServer, args=(), kwargs={})
-th.start()
-time.sleep(5)
-th = threading.Thread(group=None, target=clientAudio.audioClient, args=(), kwargs={})
-th.start()
-clientVideo.videoClient()
-
-'''
-
 
 def listenForConnection() :
   #  main.chatWindow(1)
@@ -50,7 +37,7 @@ def listenForConnection() :
     s.bind((HOST, PORT))
     s.listen(1)
     conn, addr = s.accept()
-    queue.put(1)
+    queue.put(addr)
     #   main.chatWindow(addr)
 
     conn.close()
@@ -66,17 +53,22 @@ def tryConnect(IP) :
 
 #start the servers for all type of communication at program startup
 def startServers():
-    '''
+
     threadVideoServer = threading.Thread(group=None, target=serverVideo.startVideoServer, args=(), kwargs={})
+    threadVideoServer.setDaemon(True)
     threadVideoServer.start()
-    threadAudioServer = threading.Thread(group=None, target=clientAudio.audioServer, args=(), kwargs={})
+
+    threadAudioServer = threading.Thread(group=None, target=serverAudio.audioServer, args=(), kwargs={})
+    threadAudioServer.setDaemon(True)
     threadAudioServer.start()
-    '''
+
 
     threadTextServer = threading.Thread(group=None, target=serverText.startTextServer, args=(socketServerText,), kwargs={})
+    threadTextServer.setDaemon(True)
     threadTextServer.start()
 
     th = threading.Thread(group=None, target=listenForConnection, args=(), kwargs={})
+    th.setDaemon(True)
     th.start()
 
 
@@ -108,6 +100,7 @@ def chatWindow(IPtoConnect):
     window = Tk()
 
     leftFrame = Frame(window,bg="black",  cursor="dot")
+    '''
     rightFrame = Frame(window,width=1000)
 
     serverVideoFrame = Frame(rightFrame, bg="red")
@@ -124,9 +117,9 @@ def chatWindow(IPtoConnect):
 
     l = Label(clientVideoFrame, text="client Video")
     l.pack(side = BOTTOM)
-
+    '''
     leftFrame.pack(side=LEFT)
-    rightFrame.pack(side=LEFT, fill = BOTH)
+    #rightFrame.pack(side=LEFT, fill = BOTH)
 
     messagesWindow = textWindow.textWindow(leftFrame,400,400)
     messagesWindow.txt.config(state=DISABLED)
@@ -141,9 +134,14 @@ def chatWindow(IPtoConnect):
 
     window.mainloop()
 
-def startChatSession( IPtoConnect):
-    print IPtoConnect
+def startChatSession(IPtoConnect):
     tryConnect(IPtoConnect)
+    th= threading.Thread(group=None, target=clientAudio.audioClient, args=(IPtoConnect,), kwargs={})
+    th.setDaemon(True)
+    th.start()
+    th= threading.Thread(group=None, target=clientVideo.videoClient, args=(IPtoConnect,), kwargs={})
+    th.setDaemon(True)
+    th.start()
     chatWindow(IPtoConnect)
     return
 
@@ -152,8 +150,20 @@ def checkIncomingConnection():
     if queue.empty():
         root.after(2000, checkIncomingConnection)
     else:
-        print "DA"
-        chatWindow(1)
+        IPtoConnect =  queue.get()
+        print "Din coada am luat" + IPtoConnect[0]
+        connectBack(IPtoConnect[0])
+        chatWindow(IPtoConnect)
+
+
+def connectBack(IPtoConnect):
+    #th= threading.Thread(group=None, target=clientAudio.audioClient, args=(IPtoConnect,), kwargs={})
+    #th.setDaemon(True)
+    #th.start()
+    th= threading.Thread(group=None, target=clientVideo.videoClient, args=(IPtoConnect,), kwargs={})
+    th.setDaemon(True)
+    th.start()
+    return
 
 def checkMsgToSend():
     print 'def checkMsgToSend:'
@@ -161,8 +171,8 @@ def checkMsgToSend():
     s = socket.socket()
 
     # TODO
-    print '[checkMsgToSend] Waiting for the connection from calin...'
-    s.connect((nameToIP['calin'], 50052))
+    print '[checkMsgToSend] Waiting for the cotnnection from calin...'
+    s.connect((nameToIP['tudor'], 50052))
     print '[checkMsgToSend] Connected.'
     while 1:
         print '[checkMsgToSend] Looking for messages to send...'
@@ -214,7 +224,8 @@ def Main():
     b.pack()
 
     root.after(2000,checkIncomingConnection)
-
+    '''
+    #for text messaging
     msgToSendThread = threading.Thread(target = checkMsgToSend)
     msgToSendThread.start()
 
@@ -222,7 +233,7 @@ def Main():
     msgToRcvThread.start()
 
     print 'Started checkMsgToSend.'
-
+    '''
     root.mainloop()
 
 if __name__ == "__main__":

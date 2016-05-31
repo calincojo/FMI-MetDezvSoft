@@ -29,6 +29,6 @@ def receiveData(s, CHUNK):
     print '[receiveData]'
     data = s.recv(1024)
     while 1:
-        print '[receiveData] Received ' + data
         data = s.recv(1024)
+        print '[receiveData] Received ' + data
         rcvTextQueue.put(data)

@@ -6,8 +6,8 @@ import clientAudio
 import threading
 import time
 
-def videoClient() :
-    HOST = '192.168.2.230'   # The remote host
+def videoClient(IP) :
+    HOST = IP   # The remote host
     VIDEO_PORT = 50051  # The same port as used by the server
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

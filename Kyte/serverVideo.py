@@ -34,7 +34,7 @@ def displayVideo(data):
 def startVideoServer() :
 
     print 'SERVER STARTED'
-    VIDEO_PORT = 50050
+    VIDEO_PORT = 50051
     VIDEO_HOST = ''
 
     frame_length =  4096
