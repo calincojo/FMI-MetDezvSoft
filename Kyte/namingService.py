@@ -37,7 +37,7 @@ try:
     print 'Socket created.'
 
     s.bind(('', 1234))
-    s.listen(1)
+    s.listen(5)
 
     while 1:
         print '\nWaiting requests...'

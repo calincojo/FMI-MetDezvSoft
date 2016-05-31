@@ -28,7 +28,7 @@ threadTextServer = ''
 
 socketClientText = ''
 socketServerText = ''
-nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196', "calin2" : "192.168.2.195"}
+nameToIP = {"renata" : "10.11.129.74", "calin" : "10.11.129.90" , 'tudor': '10.11.117.117', "calin2" : "10.11.12992"}
 
 def listenForConnection() :
   #  main.chatWindow(1)
@@ -241,6 +241,7 @@ def Main():
 
     startServers()
     #nameToIP = getOnlineUsers()
+    #getOnlineUsers()
 
     root.resizable(False,False)
     l = Label(root, text="---Online users---",bg="blue")
@@ -248,14 +249,17 @@ def Main():
 
    # populateContactList(root,nameToIP)
 
-    for key,value in nameToIP.items():
-        b = Button(root, text=key, command= lambda: startChatSession(str(nameToIP[str(key)])), width = 45)
-        b.pack(fill=BOTH)
-
-    key = "calin"
-    b1 = Button(root, text=key, command= lambda: startChatSession("10.11.129.92"), width = 45)
+    b1 = Button(root, text="calin", command= lambda: startChatSession(nameToIP["calin"]), width = 45)
     b1.pack(fill=BOTH)
 
+    b1 = Button(root, text="renata", command= lambda: startChatSession(nameToIP["renata"]), width = 45)
+    b1.pack(fill=BOTH)
+
+    b1 = Button(root, text="tudor", command= lambda: startChatSession(nameToIP["tudor"]), width = 45)
+    b1.pack(fill=BOTH)
+
+    b1 = Button(root, text="calin2", command= lambda: startChatSession(nameToIP["calin2"]), width = 45)
+    b1.pack(fill=BOTH)
 
     b = Button(root, text="Marele plus", command = lambda :addNewUser(root))
     b.pack()
