@@ -15,6 +15,7 @@ import socket
 from Queue import Queue
 import tkSimpleDialog
 from serverText import rcvTextQueue
+import json
 
 
 root = ''
@@ -27,7 +28,7 @@ threadTextServer = ''
 
 socketClientText = ''
 socketServerText = ''
-nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196'}
+nameToIP = {"renata" : "192.168.2.230", "calin" : "192.168.2.31" , 'tudor': '192.168.2.196', "calin2" : "192.168.2.195"}
 
 def listenForConnection() :
   #  main.chatWindow(1)
@@ -157,9 +158,9 @@ def checkIncomingConnection():
 
 
 def connectBack(IPtoConnect):
-    #th= threading.Thread(group=None, target=clientAudio.audioClient, args=(IPtoConnect,), kwargs={})
-    #th.setDaemon(True)
-    #th.start()
+    th= threading.Thread(group=None, target=clientAudio.audioClient, args=(IPtoConnect,), kwargs={})
+    th.setDaemon(True)
+    th.start()
     th= threading.Thread(group=None, target=clientVideo.videoClient, args=(IPtoConnect,), kwargs={})
     th.setDaemon(True)
     th.start()
@@ -193,34 +194,70 @@ def checkMsgToRcv():
 
         time.sleep(10)
 
-def addNewUser():
+def addNewUser(root):
     new_user = tkSimpleDialog.askstring("User", "Enter user to add");
     # ask the naming service if the user is taken
     s = socket.socket();
     s.connect((socket.gethostname(), 1234))
-    s.send('lookup ' + new_user);
-    msg = s.recv(1024);
-    print msg
-    if (msg != 'null'):
+    s.send('get ' + new_user)
+    while True:
+        msg = s.recv(1024)
+        if msg != "null":
+            break
+    data_loaded = json.loads(msg) #data loaded
+    print data_loaded["baba"]
+
+    if msg != 'null':
         print 'The user ' + new_user + ' is ok!'
         # add the user to the interface
     s.close();
 
+def getOnlineUsers():
+    s = socket.socket();
+    s.connect(("localhost", 1234))
+    s.send('get ')
+    while True:
+        msg = s.recv(1024)
+        if msg != "null":
+            break
+    s.close()
+    data_loaded = json.loads(msg) #data loaded
+    return data_loaded
+
+
+def populateContactList(root,nameDict):
+    for key,value in nameDict.items():
+        print value + str(len(value))
+        print nameToIP[key]
+        value = value.lstrip()
+        value = value.rstrip()
+        print value + str(len(value))
+        b = Button(root, text=key, command= lambda: startChatSession(nameToIP[key]), width = 45)
+        b.pack(fill=BOTH)
+
+    return
+
 def Main():
 
     startServers()
-    root.resizable(False,False)
+    #nameToIP = getOnlineUsers()
 
+    root.resizable(False,False)
     l = Label(root, text="---Online users---",bg="blue")
     l.pack(fill=X)
 
-    b = Button(root, text="Calin", command= lambda: startChatSession(nameToIP["calin"]), width = 45)
-    b.pack(fill=BOTH)
-    b = Button(root, text="Renata", command= lambda: startChatSession(nameToIP["renata"]) )
-    b.pack(fill=BOTH)
-    b = Button(root, text="Tudor", command= lambda: startChatSession(nameToIP["tudor"]) )
-    b.pack(fill=BOTH)
-    b = Button(root, text="Marele plus", command = addNewUser)
+   # populateContactList(root,nameToIP)
+
+    for key,value in nameToIP.items():
+        b = Button(root, text=key, command= lambda: startChatSession(str(nameToIP[str(key)])), width = 45)
+        b.pack(fill=BOTH)
+
+    key = "calin"
+    b1 = Button(root, text=key, command= lambda: startChatSession("10.11.129.92"), width = 45)
+    b1.pack(fill=BOTH)
+
+
+    b = Button(root, text="Marele plus", command = lambda :addNewUser(root))
     b.pack()
 
     root.after(2000,checkIncomingConnection)
